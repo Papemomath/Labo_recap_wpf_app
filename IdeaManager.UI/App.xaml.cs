@@ -1,5 +1,7 @@
 ﻿using IdeaManager.Data;
 using IdeaManager.Services;
+using IdeaManager.UI.Navigation;
+using IdeaManager.UI.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
@@ -19,6 +21,11 @@ public partial class App : Application
         services.AddDataServices("Data Source=ideas.db");
         services.AddDomainServices();
         services.AddUIServices();
+        services.AddSingleton<NavigationService>();
+        services.AddSingleton<MainViewModel>();
+        services.AddSingleton<IdeaFormViewModel>();
+        services.AddSingleton<IdeaListViewModel>();
+
 
         ServiceProvider = services.BuildServiceProvider();
 

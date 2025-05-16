@@ -6,7 +6,19 @@
         xmlns:local="clr-namespace:IdeaManager.UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
 
+    <Grid>
+        <DockPanel>
+            <!-- Barre de menu -->
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Background="LightGray">
+                <!--<Button Content="Nouvelle idée" Margin="10"/>-->
+                <Button Content="New Idea" Click="navigaton_New_Idea" Margin="10"/>
+                <Button Content="List Idea" Click="navigaton_List_Idea" Margin="10"/>
+            </StackPanel>
+
+            <!-- Zone de navigation dynamique -->
+            <ContentControl Content="{Binding CurrentViewModel}" />
+        </DockPanel>
     </Grid>
+
 </Window>

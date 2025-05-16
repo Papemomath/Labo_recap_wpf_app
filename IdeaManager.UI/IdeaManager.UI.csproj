@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <None Remove="Views\IdeaFormView.xaml.cs~RF519cbdf.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\IdeaManager.Core\IdeaManager.Core.csproj" />
     <ProjectReference Include="..\IdeaManager.Services\IdeaManager.Services.csproj" />
   </ItemGroup>

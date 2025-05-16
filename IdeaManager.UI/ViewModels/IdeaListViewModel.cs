@@ -1,12 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using IdeaManager.Core.Entities;
+using IdeaManager.Core.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.ObjectModel;
+
 
 namespace IdeaManager.UI.ViewModels
 {
-    internal class IdeaListViewModel
+    public partial class IdeaListViewModel : ViewModelBase
     {
+        private readonly IIdeaService _ideaService;
+
+        public IdeaListViewModel(IIdeaService ideaService)
+        {
+            _ideaService = ideaService;
+        }        
+        
+        public IdeaListViewModel()
+        {
+        }
+
+        [ObservableProperty]
+        private ObservableCollection<Idea> ideasList = new();
+
+        public async Task InitializeAsync()
+        {
+            var ideas = await _ideaService.GetAllAsync();
+            IdeasList = new ObservableCollection<Idea>(ideas);
+        }
     }
+
 }

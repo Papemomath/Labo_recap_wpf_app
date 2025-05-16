@@ -33,7 +33,7 @@ public class IdeaService : IIdeaService
         var idea = await _unitOfWork.IdeaRepository.GetByIdAsync(ideaId);
 
         if (idea == null)
-            throw new InvalidOperationException("Idée non trouvée.");
+            throw new InvalidOperationException("Idée non trouvée.");   
 
         idea.VoteCount++;
         await _unitOfWork.IdeaRepository.AddAsync(idea); // Pour simuler une mise à jour simplifiée
