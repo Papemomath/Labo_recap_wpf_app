@@ -1,9 +1,6 @@
 ﻿using IdeaManager.Core.Entities;
 using IdeaManager.Core.Interfaces;
-using IdeaManager.Services;
 using Moq;
-using System.Threading.Tasks;
-using Xunit;
 
 namespace IdeaManager.Tests.Services
 {
