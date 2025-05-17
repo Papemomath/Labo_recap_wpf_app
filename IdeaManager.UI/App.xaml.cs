@@ -18,7 +18,7 @@ public partial class App : Application
     {
         var services = new ServiceCollection();
 
-        services.AddDataServices("Data Source=ideas.db");
+        services.AddDataServices("Data Source=D:/projet_Entreprise/Labo_recap_wpf_app/IdeaManager.Data/idea.db");
         services.AddDomainServices();
         services.AddUIServices();
         services.AddSingleton<NavigationService>();

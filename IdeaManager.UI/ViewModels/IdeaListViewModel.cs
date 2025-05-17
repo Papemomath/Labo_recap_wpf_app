@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 
 namespace IdeaManager.UI.ViewModels
 {
-    public partial class IdeaListViewModel : ViewModelBase
+    public partial class IdeaListViewModel : ObservableObject
     {
         private readonly IIdeaService _ideaService;
 
@@ -15,10 +15,6 @@ namespace IdeaManager.UI.ViewModels
         {
             _ideaService = ideaService;
         }        
-        
-        public IdeaListViewModel()
-        {
-        }
 
         [ObservableProperty]
         private ObservableCollection<Idea> ideasList = new();

@@ -23,6 +23,10 @@ namespace IdeaManager.UI.ViewModels
 
         [ObservableProperty]
         private string errorMessage;
+        
+        [ObservableProperty]
+        private string confirmationMessage;
+
 
         [RelayCommand]
         private async Task SubmitAsync()
@@ -37,7 +41,9 @@ namespace IdeaManager.UI.ViewModels
 
                 await _ideaService.SubmitIdeaAsync(idea);
                 ErrorMessage = string.Empty;
-                title = string.Empty;
+                ConfirmationMessage = "Idée soumise avec succès !";
+
+                Title = string.Empty;
                 Description = string.Empty;
             }
             catch (Exception ex)
