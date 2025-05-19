@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using IdeaManager.Core.Entities;
 using IdeaManager.Core.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 
 

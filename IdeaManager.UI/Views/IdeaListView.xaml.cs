@@ -1,5 +1,4 @@
 ﻿using IdeaManager.Core.Interfaces;
-using IdeaManager.UI.ViewModels;
 using System.Windows.Controls;
 using IdeaManager.Data.DB;
 
@@ -16,8 +15,6 @@ namespace IdeaManager.UI.Views
         {
             InitializeComponent();        
             var dbContext = new IdeaDbContextFactory().CreateDbContext(null);
-            //var ideaService = new IdeaService(dbContext);
-            //DataContext = new IdeaListViewModel(ideaService);           
         }
         
     }

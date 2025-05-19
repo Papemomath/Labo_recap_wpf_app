@@ -4,6 +4,7 @@ using IdeaManager.UI.Navigation;
 using IdeaManager.UI.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
+using IdeaManager.UI.Views;
 
 namespace IdeaManager.UI;
 
@@ -25,6 +26,8 @@ public partial class App : Application
         services.AddSingleton<MainViewModel>();
         services.AddSingleton<IdeaFormViewModel>();
         services.AddSingleton<IdeaListViewModel>();
+        services.AddSingleton<DashboardView>();
+        
 
 
         ServiceProvider = services.BuildServiceProvider();

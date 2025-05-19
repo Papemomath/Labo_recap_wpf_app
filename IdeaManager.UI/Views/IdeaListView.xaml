@@ -7,7 +7,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <Grid>
-        <DataGrid ItemsSource="{Binding IdeasList}" Margin="45"/>
+        <DataGrid ItemsSource="{Binding IdeasList}" Margin="45"/>   
     </Grid>
 
 </UserControl>
